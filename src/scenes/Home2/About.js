@@ -1,10 +1,35 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Container, Row, Col } from "react-grid-system";
+import {getExperience, getEducation} from "./Calls"
 
 // Components
 import Icon from "../../components/common/Icon";
 
 function About() {
+     const [education, setEducation] = useState([]);
+     const [experience, setExperience] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      const code = await getExperience();
+    //   const { school,duration,description,_id } = code.contact;
+      setExperience(code.experience);
+      return
+    }
+
+    fetchData();
+  }, []);
+  useEffect(() => {
+    async function fetchEdu() {
+      const edu = await getEducation();
+    //   const { PlaceOfWork,duration,description,_id } = edu.contact;
+      setEducation(edu.education);
+      return
+    }
+
+    fetchEdu();
+  }, []);
+
+  if(experience.length > 0 && education.length > 0){
     return (
         <section className="section section-about section-about-2">
             <div className="section-resume section-resume-1 my-resume">
@@ -15,45 +40,27 @@ function About() {
                                 <Col xs={12} sm={12} md={12} lg={12} xl={6} className="bg-light">
                                     <div className="inner">
                                         <div className="resume-row resume-dark">
-                                            <h4 className="resume-title">Resume</h4>
+                                            <h4 className="resume-title">Education</h4>
                                             <ul>
-                                                <li>
-                                                    <div className="resume-item">
-                                                        <div className="resume-head">
-                                                            <Icon title="Yoga Club Coach" subtitle="New York" small="(2016-2018)">
-                                                                <span className="ti-paint-bucket"></span>
-                                                            </Icon>
-                                                        </div>
-                                                        <div className="resume-body">
-                                                            <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo.</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div className="resume-item">
-                                                        <div className="resume-head">
-                                                            <Icon title="Neo Club Coach" subtitle="New York" small="(2018-2019)">
-                                                                <span className="ti-cup"></span>
-                                                            </Icon>
-                                                        </div>
-                                                        <div className="resume-body">
-                                                            <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo.</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div className="resume-item">
-                                                        <div className="resume-head">
-                                                            <Icon title="Fitness Trainer" subtitle="New York" small="(2019-2020)">
-                                                                <span className="ti-ruler-alt-2"></span>
-                                                            </Icon>
-                                                        </div>
-                                                        <div className="resume-body">
-                                                            <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo.</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
+												{education.map((item) => (
+													<li key={item._id}>
+														<div className="resume-item">
+															<div className="resume-head">
+																<Icon
+																	title={item.school}
+																	subtitle="Duration:"
+																	small={item.duration}
+																>
+																	<span className="ti-medall" />
+																</Icon>
+															</div>
+															<div className="resume-body">
+																<p>{item.description}</p>
+															</div>
+														</div>
+													</li>
+												))}
+											</ul>
                                         </div>
                                     </div>
                                 </Col>
@@ -62,43 +69,26 @@ function About() {
                                         <div className="resume-row resume-dark">
                                             <h4 className="resume-title">Experience</h4>
                                             <ul>
-                                                <li>
-                                                    <div className="resume-item">
-                                                        <div className="resume-head">
-                                                            <Icon title="Yoga Club Coach" subtitle="New York" className="el-icon-dark" small="(2016-2017)">
-                                                                <span className="ti-pencil-alt"></span>
-                                                            </Icon>
-                                                        </div>
-                                                        <div className="resume-body">
-                                                            <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo.</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div className="resume-item">
-                                                        <div className="resume-head">
-                                                            <Icon title="Neo Club Coach" subtitle="New York" className="el-icon-dark" small="(2017-2019)">
-                                                                <span className="ti-heart"></span>
-                                                            </Icon>
-                                                        </div>
-                                                        <div className="resume-body">
-                                                            <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo.</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div className="resume-item">
-                                                        <div className="resume-head">
-                                                            <Icon title="Neo Club Coach" subtitle="New York" className="el-icon-dark" small="(2019-2020)">
-                                                                <span className="ti-paint-bucket"></span>
-                                                            </Icon>
-                                                        </div>
-                                                        <div className="resume-body">
-                                                            <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo.</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
+												{experience.map((item) => (
+													<li key={item._id}>
+														<div className="resume-item">
+															<div className="resume-head">
+																<Icon
+																	title={item.PlaceOfWork}
+																	subtitle="Duration:"
+																	className="el-icon-dark"
+																	small={item.duration}
+																>
+																	<span className="ti-briefcase" />
+																</Icon>
+															</div>
+															<div className="resume-body">
+																<p>{item.description}</p>
+															</div>
+														</div>
+													</li>
+												))}
+											</ul>
                                         </div>
                                     </div>
                                 </Col>
@@ -108,7 +98,24 @@ function About() {
                 </div>
             </div>
         </section>
-    );
+    )
+  }else{
+    return (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100vw",
+            height: "100vh",
+            background: "#fff",
+          }}
+        >
+          <img alt="loader" src="https://i.gifer.com/3sqI.gif" />
+        </div>
+      );
+  }
+    
 }
 
 export default About;
