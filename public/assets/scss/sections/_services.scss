@@ -1,0 +1,343 @@
+/*------------------------------------
+    Section: Service
+------------------------------------*/
+
+.section-service {
+    .slick-dots {
+        z-index: 33;
+        bottom: 40px;
+    }
+}
+
+// Service 1
+.section-service-1 {
+    max-height: 100vh !important;
+
+    .el-slider {
+        background: linear-gradient(180deg, transparent 27%, $base-0 87%);
+    }
+    .box {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        border: 0;
+        outline: 0;
+
+        &:after {
+            top: 0;
+            right: 0;
+            height: 100%;
+            content: "";
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            background-color: $primary;
+            transition: all 600ms;
+        }
+        &:hover {
+            &:after {
+                opacity: 0.1;
+            }
+        }
+        .inner {
+            left: 0;
+            right: 0;
+            bottom: 45px;
+            padding: 0 30px;
+            position: absolute;
+        }
+        &:before {
+            top: 0;
+            right: 0;
+            height: 100%;
+            content: "";
+            position: absolute;
+            width: 1px;
+            opacity: 0.3;
+            background-image: linear-gradient(180deg, transparent 0%, $base-1 100%);
+        }
+    }
+    .service-item {
+        z-index: 3;
+        position: relative;
+        p {
+            opacity: 0.6;
+            font-size: 12px;
+            font-weight: 300;
+            padding-left: 10px;
+            margin-bottom: 0;
+        }
+        h3 {
+            font-size: 16px;
+        }
+        .count {
+            opacity: 0.6;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        &:before {
+            top: 43px;
+            left: 0;
+            width: 30px;
+            height: 1px;
+            content: "";
+            position: absolute;
+        }
+        .service-head {
+            position: relative;
+
+            .el-icon {
+                left: 15px;
+                right: 15px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+// Service 2
+.section-service-2 {
+    max-height: 100vh !important;
+
+    .el-slider {
+        background: linear-gradient(180deg, transparent 27%, $base-0 100%);
+    }
+    .box {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        border: 0;
+        outline: 0;
+
+        &:after {
+            top: 0;
+            right: 0;
+            height: 100%;
+            content: "";
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            background-color: $primary;
+            transition: all 600ms;
+        }
+        &:hover {
+            &:after {
+                opacity: 0.1;
+            }
+        }
+        .inner {
+            left: 0;
+            right: 0;
+            bottom: 45px;
+            padding: 0 30px;
+            position: absolute;
+        }
+        &:before {
+            top: 0;
+            right: 0;
+            height: 100%;
+            content: "";
+            position: absolute;
+            width: 1px;
+            opacity: 0.3;
+            background-image: linear-gradient(180deg, transparent 0%, $base-1 100%);
+        }
+    }
+    .service-item {
+        z-index: 3;
+        position: relative;
+        p {
+            opacity: 0.81;
+            font-size: 12px;
+            font-weight: 300;
+            padding-left: 10px;
+            margin-bottom: 0;
+        }
+        h3 {
+            font-size: 16px;
+        }
+        .count {
+            opacity: 0.6;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        &:before {
+            top: 43px;
+            left: 0;
+            width: 30px;
+            height: 1px;
+            content: "";
+            position: absolute;
+        }
+        .service-head {
+            position: relative;
+
+            .el-icon {
+                left: 15px;
+                right: 15px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+@media (max-width: 720px) {
+    .section-service-1 {
+        .box {
+            .inner {
+                bottom: 100px;
+            }
+        }
+        .owl-carousel {
+            .owl-prev {
+                opacity: 1;
+            }
+            .owl-next {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// Service 2
+.section-service-5 {
+    .box {
+        position: relative;
+    }
+    .service-item {
+        z-index: 3;
+        position: relative;
+        padding: 20px;
+        border: 1px solid #000;
+        &:after {
+            top: 0;
+            right: 0;
+            height: 100%;
+            content: "";
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            background-color: $primary;
+            transition: all 600ms;
+        }
+        &:hover {
+            &:after {
+                opacity: 0.15;
+            }
+        }
+        .inner {
+            padding: 15px;
+
+            p {
+                font-size: 12px;
+                font-weight: 300;
+                padding-left: 10px;
+                margin-bottom: 0;
+            }
+            h3 {
+                font-size: 16px;
+            }
+            .count {
+                opacity: 0.6;
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+            &:before {
+                top: 43px;
+                left: 0;
+                width: 30px;
+                height: 1px;
+                content: "";
+                position: absolute;
+            }
+            .service-head {
+                position: relative;
+
+                .el-icon {
+                    left: 15px;
+                    right: 15px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    .slick-dots {
+        z-index: 33;
+        bottom: -30px;
+    }
+}
+
+// Service 4
+.section-service-4 {
+    max-height: 100vh !important;
+
+    .box {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        border: 0;
+        outline: 0;
+    }
+    .service-item {
+        z-index: 3;
+        position: relative;
+        padding-top: 100%;
+        border: 1px solid #fff;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        &:after {
+            top: 0;
+            right: 0;
+            height: 100%;
+            content: "";
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            background-color: $primary;
+            transition: all 600ms;
+        }
+        &:hover {
+            &:after {
+                opacity: 0.15;
+            }
+        }
+        .inner {
+            padding: 15px;
+
+            p {
+                color: $base-1 !important;
+                font-size: 12px;
+                font-weight: 300;
+                padding-left: 10px;
+                margin-bottom: 0;
+            }
+            h3 {
+                font-size: 16px;
+            }
+            .count {
+                opacity: 0.6;
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+            &:before {
+                top: 43px;
+                left: 0;
+                width: 30px;
+                height: 1px;
+                content: "";
+                position: absolute;
+            }
+            .service-head {
+                position: relative;
+
+                .el-icon {
+                    left: 15px;
+                    right: 15px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}

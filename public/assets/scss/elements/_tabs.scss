@@ -1,0 +1,56 @@
+/*------------------------------------
+    Element: Tabs
+------------------------------------*/
+
+.el-tabs {
+    width: 100%;
+    display: block;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    margin-bottom: 0 0 30px;
+}
+
+// Tabs 1
+.el-tabs-1 {
+    .el-tabs-links {
+        padding: 0;
+        text-align: center;
+        margin: 0 auto 30px;
+
+        li {
+            display: inline-block;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 500;
+            position: relative;
+            padding: 7px 15px;
+            border-radius: 30px;
+            user-select: none;
+            margin-right: 9px;
+            background-color: $gray;
+
+            &.active,
+            &.react-tabs__tab--selected {
+                color: $primary;
+            }
+        }
+    }
+}
+
+// Tabs 2
+.el-tabs-2 {
+    .el-tabs-links {
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            margin-right: 30px;
+        }
+    }
+}
+
+.el-tabs .react-tabs__tab-panel--selected {
+    animation: fadeIn 450ms linear;
+}

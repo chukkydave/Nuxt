@@ -1,0 +1,311 @@
+/*------------------------------------
+    Element: Tabs
+------------------------------------*/
+
+.el-tabs {
+    .el-tabs-links {
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        margin-bottom: 30px;
+
+        li {
+            color: $base-1;
+            cursor: pointer;
+            opacity: 0.6;
+            font-size: 12px;
+            display: inline-block;
+            font-weight: 500;
+            user-select: none;
+            position: relative;
+            padding: 7px 15px;
+
+            &.active {
+                opacity: 1;
+                background: $primary;
+            }
+        }
+    }
+}
+
+/*------------------------------------
+    Element: Slider
+------------------------------------*/
+
+.slick-slider {
+    .slick-dots {
+        li {
+            top: 25px;
+            position: relative;
+            margin: 0 !important;
+
+            button {
+                &:before {
+                    color: $base-1;
+                    width: 8px !important;
+                    height: 8px !important;
+                    opacity: 1 !important;
+                    overflow: hidden;
+                    border: 1px solid $base-1;
+                    border-radius: 50%;
+                }
+            }
+            &.slick-active {
+                button {
+                    &:before {
+                        color: $primary;
+                        border-color: $primary;
+                        background-color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.el-slider-plr--15 {
+    padding-left: -15px;
+    padding-right: -15px;
+
+    .slick-slide {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/*------------------------------------
+    Element: Divider
+------------------------------------*/
+
+.divider {
+    width: 63px;
+    height: 4px;
+    display: inline-block;
+    position: relative;
+    margin: 0 9px 20px;
+    background-color: $primary;
+
+    &.divider-1 {
+        width: 63px;
+        height: 4px;
+        position: relative;
+        margin-bottom: 20px;
+        background: $primary;
+    }
+    &.divider-1-1 {
+        margin-right: 12px !important;
+    }
+    &.divider-1-2 {
+        &:before {
+            left: -9px;
+            width: 5px;
+            height: 5px;
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            background-color: $primary;
+        }
+        &:after {
+            left: -17px;
+            width: 5px;
+            height: 5px;
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            background-color: $primary;
+        }
+        &.divider-single {
+            left: 12px;
+        }
+    }
+}
+/*------------------------------------
+    Element: Headline
+------------------------------------*/
+
+.el-headline {
+    width: 100%;
+    position: relative;
+    margin-bottom: $space / 2;
+
+    .el-headline-title {
+        font-size: 36px;
+    }
+    .el-headline-label {
+        position: relative;
+
+        span {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        &:before {
+            left: 0;
+            right: 0;
+            bottom: 10px;
+            width: 36px;
+            height: 36px;
+            opacity: 0.75;
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            margin: auto;
+            background-color: $primary;
+        }
+    }
+    &.center {
+        max-width: $sm;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .el-headline {
+        p {
+            font-size: 14px;
+        }
+        .el-headline-title {
+            font-size: 21px;
+        }
+    }
+}
+
+/*------------------------------------
+    Element: Heading
+------------------------------------*/
+
+.el-heading {
+    p {
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 30px;
+        line-height: 1.4;
+    }
+    .label {
+        color: $primary;
+        display: block;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    .el-heading-label {
+        color: $primary;
+        display: block;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    &.el-heading-center {
+        max-width: $md;
+        text-align: center;
+        margin: 0 auto 100px;
+    }
+    &.no-title p {
+        padding-top: 7px;
+    }
+}
+
+@media (max-width: 992px) {
+    .el-heading {
+        p {
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 30px !important;
+            line-height: 1.4;
+        }
+    }
+}
+
+/*------------------------------------
+    Element: Scroll
+------------------------------------*/
+
+.el-scroll {
+    left: 0;
+    right: 0;
+    bottom: 66px;
+    width: 30px;
+    height: 45px;
+    z-index: 18;
+    position: absolute;
+    margin: auto;
+    border-radius: 25px;
+    border: 1px solid #fff;
+
+    &:before {
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        top: 9px;
+        width: 2px;
+        height: 9px;
+        display: block;
+        background: #fff;
+        border-radius: 3px;
+        content: "";
+        animation-name: scroll;
+        animation-duration: 1.2s;
+        animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+        animation-iteration-count: infinite;
+    }
+}
+.el-scroll-line {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 50px;
+    display: block;
+    content: "";
+    width: 1px;
+    height: 50px;
+    margin: auto;
+    position: absolute;
+    background-color: #fff;
+
+}
+/*------------------------------------
+    Element: Blockquote
+------------------------------------*/
+
+.el-blockquote {
+    overflow: hidden;
+    position: relative;
+    font-size: 16px;
+    font-style: inherit;
+    margin-top: 30px;
+    padding: 15px 30px 15px 81px;
+
+    p {
+        font-weight: 100;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+    .el-blockquote-icon {
+        top: 12px;
+        left: 0;
+        width: 60px;
+        height: 60px;
+        color: $base-1;
+        display: block;
+        font-size: 18px;
+        line-height: 60px;
+        text-align: center;
+        padding-top: 4px;
+        border-radius: 50%;
+        position: absolute;
+        background: $primary;
+    }
+    .el-blockquote-author {
+        color: $primary;
+        font-size: 14px;
+    }
+}

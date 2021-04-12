@@ -1,0 +1,86 @@
+/*------------------------------------
+    Element: Icon
+------------------------------------*/
+
+.el-icon {
+    display: block;
+    position: relative;
+    margin-bottom: 30px;
+
+    .el-icon-label,
+    .el-icon-title,
+    .el-icon-subtitle {
+        display: block;
+        padding-left: 66px;
+    }
+    .el-icon-label {
+        top: -3px;
+        opacity: 0.6;
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        position: relative;
+        margin-bottom: 6px;
+    }
+    .el-icon-title {
+        top: -4px;
+        font-size: 14px;
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 3px;
+    }
+    .el-icon-small {
+        font-size: 80%;
+    }
+    .el-icon-subtitle {
+        font-size: 12px;
+    }
+    .el-icon-circle {
+        top: 0;
+        left: 0;
+        width: 36px;
+        height: 36px;
+        display: block;
+        text-align: center;
+        position: absolute;
+
+        .el-icon-inner {
+            top: 9px;
+            left: 9px;
+            font-size: 30px;
+            position: absolute;
+        }
+        &:before {
+            top: 0;
+            left: 0;
+            width: 36px;
+            height: 36px;
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            background-color: $primary;
+        }
+    }
+    &.el-icon-dark {
+        .el-icon-title,
+        .el-icon-subtitle {
+            color: $black;
+        }
+    }
+    &.el-icon-light {
+        .el-icon-title,
+        .el-icon-subtitle {
+            color: $white;
+        }
+    }
+    &:before {
+        top: 0;
+        left: 0;
+        width: 36px;
+        height: 36px;
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background: $primary;
+    }
+}

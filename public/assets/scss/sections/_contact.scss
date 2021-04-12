@@ -1,0 +1,64 @@
+/*------------------------------------
+    Section: Contact
+------------------------------------*/
+
+.section-contact-1 {
+    .form {
+        padding-bottom: 50px;
+    }
+    .social-links {
+        right: 0;
+        bottom: 0;
+        color: $primary;
+        display: inline;
+        position: absolute;
+        padding-left: 30px;
+        padding-right: 15px;
+        background-color: $base-0;
+        p {
+            float: right;
+            color: $primary;
+            font-size: 14px;
+            line-height: 50px;
+            white-space: nowrap;
+            padding-right: 45px;
+            margin-bottom: 0;
+        }
+        ul {
+            float: right;
+            height: 50px;
+            list-style: none;
+            padding-left: 0;
+            padding-right: 15px;
+            margin: 0;
+            li {
+                margin-left: 15px;
+                display: inline-block;
+                a {
+                    display: block;
+                    font-size: 14px;
+                    line-height: 50px;
+                }
+                &:hover {
+                    color: $base-1;
+                }
+            }
+        }
+        &:before {
+            right: 0;
+            bottom: 0;
+            width: 4px;
+            height: 100px;
+            content: "";
+            position: absolute;
+            background-color: $primary;
+        }
+    }
+}
+
+//
+.section-contact-2 {
+    form {
+        margin-bottom: $space / 2;
+    }
+}
