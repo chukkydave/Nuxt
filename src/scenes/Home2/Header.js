@@ -3,7 +3,7 @@ import { useRouteMatch, NavLink, Link } from "react-router-dom";
 import { FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
 
 // Components
-import DemoOptions from "../../components/common/DemoOptions";
+// import DemoOptions from "../../components/common/DemoOptions";
 
 const links = [
     {
@@ -46,7 +46,7 @@ function Header() {
         <>
             <header className="app-header app-header-2">
                 <div className="header-logo">
-                    <Link to={url}>NUXT</Link>
+                    <Link to={url}>Nonso Ikenwa</Link>
                 </div>
                 <button className="button button-menu" onClick={(e) => handleClick(e)}>
                     <span></span>
@@ -65,7 +65,7 @@ function Header() {
             <div className={`app-sidenav ${displaySidenav && "active"}`}>
                 <div className="sidenav-menu">
                     <div className="logo">
-                        <Link to={url}>NUXT</Link>
+                        <Link to={url}>Nonso Ikenwa</Link>
                     </div>
                     <button className="button" onClick={(e) => handleClick(e)}></button>
                     <ul className="sidenav-nav">
@@ -100,7 +100,7 @@ function Header() {
                 </div>
                 <span className="sidenav-close" />
             </div>
-            <DemoOptions />
+            {/* <DemoOptions /> */}
         </>
     );
 }
