@@ -43,15 +43,15 @@ function Intro() {
                     Based in {about.address}.
                   </h1>
                 </header>
-                <Link to="/home-2/about">
+                <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1UQMcAgxOxRWxgb5ECSZa3oedqma58DL0/view?usp=sharing">
                   <button
                     type="button"
                     className="button button-lg button-primary"
                   >
                     <span className="wave" />
-                    <span className="text text-dark">Read More</span>
+                    <span className="text text-dark">Download Resume</span>
                   </button>
-                </Link>
+                </a>
                 <Link to="//portfolio">
                   <button
                     type="button"
