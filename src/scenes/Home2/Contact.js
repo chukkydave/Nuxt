@@ -1,12 +1,24 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-import { FaTwitter, FaGithub, FaVimeo } from 'react-icons/fa';
+import { FaTwitter, FaFacebook, FaMedium, FaInstagram } from 'react-icons/fa';
+import {getAbout} from './Calls'
 
 // Components
 import Icon from '../../components/common/Icon';
 import Headline from '../../components/common/Headline';
 
 function Contact() {
+	const [about, setAbout] = useState({});
+  useEffect(() => {
+    async function fetchData() {
+      const code = await getAbout();
+      setAbout({...code.contact});
+	  console.log(code.contact)
+    }
+
+    fetchData();
+  }, []);
+
 	return (
 		<section className="section section-contact section-contact-1 display-fit-screen">
 			<div
@@ -16,18 +28,23 @@ function Contact() {
 				<div className="social-links">
 					<ul>
 						<li>
-							<a href="/#">
+							<a target="_blank" rel="noopener noreferrer" href={about.twitterLink}>
 								<FaTwitter />
 							</a>
 						</li>
 						<li>
-							<a href="/#">
-								<FaGithub />
+							<a target="_blank" rel="noopener noreferrer" href={about.facebookLink}>
+								<FaFacebook />
 							</a>
 						</li>
 						<li>
-							<a href="/#">
-								<FaVimeo />
+							<a target="_blank" rel="noopener noreferrer" href={about.IGlink}>
+								<FaInstagram />
+							</a>
+						</li>
+						<li>
+							<a target="_blank" rel="noopener noreferrer" href={about.IGlink}>
+								<FaMedium />
 							</a>
 						</li>
 					</ul>
@@ -71,17 +88,17 @@ function Contact() {
 						</form>
 						<Row>
 							<Col xs={12} sm={12} md={6} lg={4}>
-								<Icon title="PHONE" subtitle="+123 456-789-000">
+								<Icon title="PHONE" subtitle={about.phone}>
 									<span className="ti-mobile" />
 								</Icon>
 							</Col>
 							<Col xs={12} sm={12} md={6} lg={4}>
-								<Icon title="EMAIL" subtitle="Example@domain.com">
+								<Icon title="EMAIL" subtitle={about.email}>
 									<span className="ti-email" />
 								</Icon>
 							</Col>
 							<Col xs={12} sm={12} md={12} lg={4}>
-								<Icon title="ADDRESS" subtitle="California, USA">
+								<Icon title="ADDRESS" subtitle={about.address}>
 									<span className="ti-direction" />
 								</Icon>
 							</Col>
