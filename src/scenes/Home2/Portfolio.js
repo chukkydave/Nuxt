@@ -156,12 +156,12 @@ function Portfolio() {
     async function fetchData() {
       const code = await getPortfolio();
     //   const { school,duration,description,_id } = code.contact;
-      let porto = []
-      code.portfolio.map((items)=>{
-        return porto.push({name:items.categoryName,items:[{title:items.title,link:items.link,image:items.images[0],thumbnail:items.images[0],subtitle:items.title}]})
-      })
-    //   console.log("porto",porto)
-      setPorts(porto);
+    //   let porto = []
+    //   code.portfolio.map((items)=>{
+    //     return porto.push({name:items.categoryName,items:[{title:items.title,link:items.link,image:items.images[0],thumbnail:items.images[0],subtitle:items.title}]})
+    //   })
+      console.log("porto",code)
+      setPorts(code.portfolio);
     //   return
     }
 
@@ -176,7 +176,7 @@ function Portfolio() {
                     <Tabs className="el-tabs el-tabs-1" selectedTabClassName="active">
                         <TabList className="el-tabs-links">
                             {ports.map((category, categoryIndex) => (
-                                <Tab key={categoryIndex}>{category.name}</Tab>
+                                <Tab key={categoryIndex}>{category.categoryName}</Tab>
                             ))}
                         </TabList>
                         {ports.map((category, categoryIndex) => (
@@ -185,12 +185,12 @@ function Portfolio() {
                                     {category.items.map((item, index) => (
                                         <Col key={index} xs={6} sm={6} md={6} lg={3} xl={3}>
                                             <div className="portfolio-item">
-                                                <a target="_blank" rel="noopener noreferrer" href={`/home-2${item.link}`}>
+                                                <a target="_blank" rel="noopener noreferrer" href={`${item.link}`}>
                                                     <div className="portfolio-card">
-                                                        <div className="image overlay-image" style={{ backgroundImage: `url(${item.image})` }} />
+                                                        <div className="image overlay-image" style={{ backgroundImage: `url(${item.images[0]})` }} />
                                                         <div className="content">
                                                             <span>{item.title}</span>
-                                                            <h3>{item.subtitle}</h3>
+                                                            {/* <h3>{item.subtitle}</h3> */}
                                                         </div>
                                                     </div>
                                                 </a>

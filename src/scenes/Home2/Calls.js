@@ -161,7 +161,8 @@ function getBlog() {
 	// 				blog: '',
 	// 			});
 	// 		});
-	return fetch(`${apiPath}view/blog`).then((data) => data.json());
+	// return fetch(`${apiPath}view/blog`).then((data) => data.json());
+	return fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@nonsoikenwa").then((data) => data.json());
 }
 
 export { getAbout, getServices, getPortfolio, getExperience, getEducation, getCategory, getBlog };

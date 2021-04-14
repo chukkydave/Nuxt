@@ -52,7 +52,7 @@ function Intro() {
                     <span className="text text-dark">Download Resume</span>
                   </button>
                 </a>
-                <Link to="//portfolio">
+                <Link to="/portfolio">
                   <button
                     type="button"
                     className="button button-lg text-primary"

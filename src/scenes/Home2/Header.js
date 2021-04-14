@@ -8,27 +8,27 @@ import { FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
 const links = [
     {
         title: "Intro",
-        path: "/intro",
+        path: "intro",
     },
     {
         title: "About",
-        path: "/about",
+        path: "about",
     },
     {
         title: "Service",
-        path: "/service",
+        path: "service",
     },
     {
         title: "Portfolio",
-        path: "/portfolio",
+        path: "portfolio",
     },
     {
         title: "Blog",
-        path: "/blog",
+        path: "blog",
     },
     {
         title: "Contact",
-        path: "/contact",
+        path: "contact",
     },
 ];
 

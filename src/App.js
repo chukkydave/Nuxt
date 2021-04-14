@@ -10,6 +10,7 @@ import Service from "./scenes/Home2/Service";
 import Contact from "./scenes/Home2/Contact";
 import Portfolio from "./scenes/Home2/Portfolio";
 import SinglePost from "./scenes/Home2/SinglePost";
+import Singular from "./scenes/Home2/singular";
 import PortfolioDetails from "./scenes/Home2/PortfolioDetails";
 
 // Components
@@ -19,39 +20,43 @@ import RedirectAs404 from "./components/common/RedirectAs404";
 
 const routes = [
     {
-        path: "/intro",
+        path: "intro",
         component: <Intro />,
     },
     {
-        path: "/",
+        path: "",
         component: <Intro />,
     },
     {
-        path: "/about",
+        path: "about",
         component: <About />,
     },
     {
-        path: "/service",
+        path: "service",
         component: <Service />,
     },
     {
-        path: "/portfolio",
+        path: "portfolio",
         component: <Portfolio />,
     },
     {
-        path: "/portfolio-details",
+        path: "portfolio-details",
         component: <PortfolioDetails />,
     },
     {
-        path: "/blog",
+        path: "blog",
         component: <Blog />,
     },
     {
-        path: "/single-post",
+        path: "single-post",
         component: <SinglePost />,
     },
     {
-        path: "/contact",
+        path: "singular",
+        component: <Singular />,
+    },
+    {
+        path: "contact",
         component: <Contact />,
     },
 ];
