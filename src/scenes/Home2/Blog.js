@@ -43,11 +43,14 @@ function Blog() {
       
       console.log("porto",code)
       setBlgs(code);
+      
     //   return
     }
 
     fetchData();
   }, []);
+
+  
     let sliderSettings = {
         dots: true,
         speed: 500,
@@ -92,15 +95,22 @@ function Blog() {
                         <Slider className="el-slider el-slider-plr--15" {...sliderSettings}>
                             {blgs.items.map((item, index) => (
                                 <div key={index} className="post-item">
-                                    <Link to={`/single-post`}>
+                                    {/* <Link to={{pathname:'/single-post', param1:{referrer:item}}}>
                                         <div className="post-image bg-primary">
                                             <img src={item.thumbnail} alt={item.title} />
                                         </div>
-                                    </Link>
+                                    </Link> */}
+
+                                    <a target="_blank" rel="noopener noreferrer" href={item.link}>
+                                        <div className="post-image bg-primary">
+                                            <img src={item.thumbnail} alt={item.title} />
+                                        </div>
+                                    </a>
                                     <div className="post-content">
                                         <div className="post-data">
                                             <h4 className="post-title">
-                                                <Link to={`/singular`}>{item.title}</Link>
+                                                <a target="_blank" href={item.link} rel="noopener noreferrer">{item.title}</a>
+                                                {/* <Link to={`/singular`}>{item.title}</Link> */}
                                             </h4>
                                             <div className="post-date">
                                                 <i className="ti-time"></i>

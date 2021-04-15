@@ -1,11 +1,17 @@
 import React from "react";
 import { Container } from "react-grid-system";
 import { FaQuoteRight } from "react-icons/fa";
+import {useHistory } from "react-router-dom";
 
 // Components
 import Headline from "../../components/common/Headline";
 
 function BlogDetails(props) {
+    // const { location: { param1: { referrer } }} = useHistory();
+    // console.log(referrer)
+    // const referrer = props.history.location.param1.referrer;
+
+    // console.log(referrer)
     return (
         <div className="section section-details section-blog-details display-fit-screen">
             <div className="section-inner-sidebar overlay-image" style={{ backgroundImage: `url(/assets/images/blog/2.jpg)` }}></div>
