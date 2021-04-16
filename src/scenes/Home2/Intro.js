@@ -36,8 +36,8 @@ function Intro() {
                     I'm a {}
                     <TextLoop>
                       <span>Product Manager</span>
-                      {/* <span>Web Developer </span>
-      									<span>Web Designer </span> */}
+                      <span>Ux Researcher </span>
+      									<span>Product Analyst</span>
                     </TextLoop>
                     <br />
                     Based in {about.address}.
