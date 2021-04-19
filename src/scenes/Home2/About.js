@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { Container, Row, Col } from "react-grid-system";
 import {getExperience, getEducation} from "./Calls"
+import moment from 'moment'
 
 // Components
 import Icon from "../../components/common/Icon";
@@ -43,6 +44,11 @@ function About() {
                                             <h4 className="resume-title">Education</h4>
                                             <ul>
 												{education.map((item) => (
+                          // let dt = item.duration.split('-')
+                          // let start = `${dt[0]}-${dt[1]}`;
+                          // let end = `${dt[2]}-${dt[3]}`;
+                          // let starter = moment(start, 'YYYY-MM').format('MMM YYYY');
+                          // let ender = moment(end, 'YYYY-MM').format('MMM YYYY');}
 													<li key={item._id}>
 														<div className="resume-item">
 															<div className="resume-head">
