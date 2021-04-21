@@ -2,8 +2,8 @@ import React, {useState, useEffect} from "react";
 import { Container, Row, Col } from "react-grid-system";
 import {getExperience, getEducation} from "./Calls"
 import moment from 'moment'
-import Moment from 'react-moment';
-import 'moment-timezone';
+// import Moment from 'react-moment';
+// import 'moment-timezone';
 
 // Components
 import Icon from "../../components/common/Icon";
