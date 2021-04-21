@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react";
 import { Container, Row, Col } from "react-grid-system";
 import {getExperience, getEducation} from "./Calls"
 import moment from 'moment'
+import Moment from 'react-moment';
+import 'moment-timezone';
 
 // Components
 import Icon from "../../components/common/Icon";
@@ -55,7 +57,7 @@ function About() {
 																<Icon
 																	title={item.school}
 																	subtitle="Duration:"
-																	small={item.duration}
+																	small={`${moment(item.start, 'YYYY-MM').format('MMM YYYY')} - ${moment(item.end, 'YYYY-MM').format('MMM YYYY')}`} 
 																>
 																	<span className="ti-medall" />
 																</Icon>
@@ -83,7 +85,7 @@ function About() {
 																	title={item.PlaceOfWork}
 																	subtitle="Duration:"
 																	className="el-icon-dark"
-																	small={item.duration}
+																	small={`${moment(item.start, 'YYYY-MM').format('MMM YYYY')} - ${moment(item.end, 'YYYY-MM').format('MMM YYYY')}`}
 																>
 																	<span className="ti-briefcase" />
 																</Icon>
