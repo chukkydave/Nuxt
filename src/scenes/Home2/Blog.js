@@ -91,7 +91,7 @@ function Blog() {
             <section className="section section-blog section-blog-2">
                 <div className="display-spacing">
                     <Container className="container">
-                        <Headline label="Blog" title={blgs.feed.description} divider_1={true} position="center" />
+                        <Headline label="Blog" title="Latest Blog Posts" divider_1={true} position="center" />
                         <Slider className="el-slider el-slider-plr--15" {...sliderSettings}>
                             {blgs.items.map((item, index) => (
                                 <div key={index} className="post-item">

@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-import { FaTwitter, FaFacebook, FaMedium, FaInstagram } from 'react-icons/fa';
+import { FaTwitter, FaFacebook, FaMedium, FaInstagram, FaLinkedin, FaLink } from 'react-icons/fa';
 import {getAbout} from './Calls'
 
 // Components
@@ -40,6 +40,11 @@ function Contact() {
 						<li>
 							<a target="_blank" rel="noopener noreferrer" href={about.IGlink}>
 								<FaInstagram />
+							</a>
+						</li>
+						<li>
+							<a target="_blank" rel="noopener noreferrer" href="#">
+								<FaLinkedin />
 							</a>
 						</li>
 						<li>
@@ -97,11 +102,11 @@ function Contact() {
 									<span className="ti-email" />
 								</Icon>
 							</Col>
-							<Col xs={12} sm={12} md={12} lg={4}>
+							{/* <Col xs={12} sm={12} md={12} lg={4}>
 								<Icon title="ADDRESS" subtitle={about.address}>
 									<span className="ti-direction" />
 								</Icon>
-							</Col>
+							</Col> */}
 						</Row>
 					</Container>
 				</div>

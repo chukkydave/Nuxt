@@ -33,12 +33,12 @@ function Intro() {
                     <span>Hello. I'm {about.name}.</span>
                   </p>
                   <h1>
-                    I'm a {}
-                    <TextLoop>
+                    I'm a <TextLoop>
                       <span>Product Manager</span>
                       <span>Ux Researcher </span>
       									<span>Product Analyst</span>
                     </TextLoop>
+                    
                     <br />
                     Based in {about.address}.
                   </h1>
