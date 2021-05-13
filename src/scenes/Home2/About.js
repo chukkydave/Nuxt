@@ -46,17 +46,13 @@ function About() {
                                             <h4 className="resume-title">Education</h4>
                                             <ul>
 												{education.map((item) => (
-                          // let dt = item.duration.split('-')
-                          // let start = `${dt[0]}-${dt[1]}`;
-                          // let end = `${dt[2]}-${dt[3]}`;
-                          // let starter = moment(start, 'YYYY-MM').format('MMM YYYY');
-                          // let ender = moment(end, 'YYYY-MM').format('MMM YYYY');}
 													<li key={item._id}>
 														<div className="resume-item">
 															<div className="resume-head">
 																<Icon
 																	title={item.school}
 																	subtitle="Duration:"
+                                  className="el-icon-dark"
 																	small={`${moment(item.start, 'YYYY-MM').format('MMM YYYY')} - ${moment(item.end, 'YYYY-MM').format('MMM YYYY')}`} 
 																>
 																	<span className="ti-medall" />
