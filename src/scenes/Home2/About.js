@@ -81,7 +81,7 @@ function About() {
 																	title={item.PlaceOfWork}
 																	subtitle="Duration:"
 																	className="el-icon-dark"
-																	small={`${moment(item.start, 'YYYY-MM').format('MMM YYYY')} - ${moment(item.end, 'YYYY-MM').format('MMM YYYY')}`}
+																	small={item.end == 'Present' ? `${moment(item.start, 'YYYY-MM').format('MMM YYYY')} - ${item.end}` : `${moment(item.start, 'YYYY-MM').format('MMM YYYY')} - ${moment(item.end, 'YYYY-MM').format('MMM YYYY')}`}
 																>
 																	<span className="ti-briefcase" />
 																</Icon>
