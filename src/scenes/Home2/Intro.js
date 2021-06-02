@@ -21,7 +21,7 @@ function Intro() {
     return (
       <section
         className="section-hero section-hero-2 display-fit-screen overlay-image"
-        style={{ backgroundImage: `url(/assets/images/person/img1.jpg)` }}
+        style={{ backgroundImage: `url(/assets/images/person/img2.jpg)`}}
       >
         <div className="display-center">
           <Container className="container">
@@ -57,7 +57,7 @@ function Intro() {
                     type="button"
                     className="button button-lg text-primary"
                   >
-                    <span className="text">My Portfolios</span>
+                    <span className="text">My Portfolio</span>
                   </button>
                 </Link>
               </Col>

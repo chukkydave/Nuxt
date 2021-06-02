@@ -28,27 +28,32 @@ function Contact() {
 				<div className="social-links">
 					<ul>
 						<li>
-							<a target="_blank" rel="noopener noreferrer" href={about.twitterLink}>
+							<a target="_blank" rel="noopener noreferrer" href='https://www.twitter.com/nonsoikenwa'>
 								<FaTwitter />
 							</a>
 						</li>
-						<li>
+						{/* <li>
+							<a target="_blank" rel="noopener noreferrer" href={about.twitterLink}>
+								<FaTwitter />
+							</a>
+						</li> */}
+						{/* <li>
 							<a target="_blank" rel="noopener noreferrer" href={about.facebookLink}>
 								<FaFacebook />
 							</a>
-						</li>
+						</li> */}
 						<li>
-							<a target="_blank" rel="noopener noreferrer" href={about.IGlink}>
+							<a target="_blank" rel="noopener noreferrer" href='https://www.instagram.com/nonsoikenwa'>
 								<FaInstagram />
 							</a>
 						</li>
 						<li>
-							<a target="_blank" rel="noopener noreferrer" href="#">
+							<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nonsoikenwa/">
 								<FaLinkedin />
 							</a>
 						</li>
 						<li>
-							<a target="_blank" rel="noopener noreferrer" href={about.IGlink}>
+							<a target="_blank" rel="noopener noreferrer" href="http://nonsoikenwa.medium.com">
 								<FaMedium />
 							</a>
 						</li>
@@ -62,7 +67,7 @@ function Contact() {
 						<Headline
 							title="Get In Touch"
 							divider_2={true}
-							subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua. Ut enim ad minim enim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+							// subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua. Ut enim ad minim enim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 						/>
 						<form className="form form-1">
 							<Row>
