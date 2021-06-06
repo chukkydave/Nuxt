@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-grid-system";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import moment from 'moment'
@@ -186,15 +186,29 @@ function Portfolio() {
                                     {category.items.map((item, index) => (
                                         <Col key={index} xs={6} sm={6} md={6} lg={3} xl={3}>
                                             <div className="portfolio-item">
-                                                <a target="_blank" rel="noopener noreferrer" href={item.link.includes('https://www.') ? item.link : `https://www.${item.link}`}>
+                                                {/* <a target="_blank" rel="noopener noreferrer" href={item.link.includes('https://www.') ? item.link : `https://www.${item.link}`}>
                                                     <div className="portfolio-card">
                                                         <div className="image overlay-image" style={{ backgroundImage: `url(${item.images[0]})` }} />
                                                         <div className="content">
                                                             <span>{item.title}</span>
-                                                            {/* <h3>{item.subtitle}</h3> */}
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </a> */}
+                                                {/* <Link to='/portfolio-details'> */}
+                                                <Link to={{
+                                                    pathname: "/portfolio-details",
+                                                    state: {
+                                                      ...item
+                                                    },
+                                                  }}>
+                                                  <div className="portfolio-card">
+                                                    <div className="image overlay-image" style={{ backgroundImage: `url(${item.images[0]})` }} />
+                                                      <div className="content">
+                                                        <span>{item.title}</span>
+                                                        {/* <h3>{item.subtitle}</h3> */}
+                                                    </div>
+                                                  </div>
+                                                </Link>
                                             </div>
                                         </Col>
                                     ))}
