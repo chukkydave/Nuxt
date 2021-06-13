@@ -8889,6 +8889,11 @@ react-app-polyfill@^1.0.6:
     regenerator-runtime "^0.13.3"
     whatwg-fetch "^3.0.0"
 
+react-calendly@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/react-calendly/-/react-calendly-2.0.4.tgz#68f6775ee3c351205e705af24d82a21f20f5a340"
+  integrity sha512-niITyo6k3P/3mx/D0XTG3h4py35rVLgwbcv5DmieBBVw/xhmFHdmg3BR0A4YJNgalaRPgSP5fNtNAmfT+YTk+A==
+
 react-dev-utils@^10.2.1:
   version "10.2.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-10.2.1.tgz#f6de325ae25fa4d546d09df4bb1befdc6dd19c19"

@@ -53,7 +53,15 @@ function PortfolioDetails() {
                             <Headline title={location.state.title} divider_2={true} />
                             <div className="el-page-content">
                                 <p>{location.state.description}</p>
-                                <a target="_blank" rel="noopener noreferrer" href={linker}>Click here to view {location.state.title}</a>
+                                <a target="_blank" rel="noopener noreferrer" href={linker}>
+                                    <button
+                                        type="button"
+                                        className="button button-lg button-primary"
+                                    >
+                                        <span className="wave" />
+                                        Click to view {location.state.title}
+                                    </button>
+                                </a>
                                 {/* <div className="el-blockquote">
                                     <div className="el-blockquote-icon">
                                         <FaQuoteRight></FaQuoteRight>

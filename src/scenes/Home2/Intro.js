@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import TextLoop from "react-text-loop";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-grid-system";
+import {PopupWidget } from "react-calendly";
 import { getAbout } from "./Calls";
 
 function Intro() {
@@ -43,6 +44,9 @@ function Intro() {
                     Based in {about.address}.
                   </h1>
                 </header>
+                {/* <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1UQMcAgxOxRWxgb5ECSZa3oedqma58DL0/view?usp=sharing"> */}
+                  
+                {/* </a> */}
                 <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1UQMcAgxOxRWxgb5ECSZa3oedqma58DL0/view?usp=sharing">
                   <button
                     type="button"
@@ -60,6 +64,13 @@ function Intro() {
                     <span className="text">My Portfolio</span>
                   </button>
                 </Link>
+                  {/* <InlineWidget url='https://calendly.com/nonsoikenwa/15min' /> */}
+                  <PopupWidget
+                    color="#00a2ff"
+                    text="Schedule time with me"
+                    textColor="#ffffff"
+                    url="https://calendly.com/nonsoikenwa/15min"
+                  />
               </Col>
             </Row>
           </Container>
