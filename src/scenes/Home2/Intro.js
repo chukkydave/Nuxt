@@ -22,7 +22,8 @@ function Intro() {
     return (
       <section
         className="section-hero section-hero-2 display-fit-screen overlay-image"
-        style={{ backgroundImage: `url(/assets/images/person/img2.jpg)`}}
+        // style={{ backgroundImage: `url(/assets/images/person/img2.jpg)`}}
+        style={{ background: 'white'}}
       >
         <div className="display-center">
           <Container className="container">
@@ -67,7 +68,7 @@ function Intro() {
                   {/* <InlineWidget url='https://calendly.com/nonsoikenwa/15min' /> */}
                   <PopupWidget
                     color="#00a2ff"
-                    text="Schedule time with me"
+                    text="Schedule a Call"
                     textColor="#ffffff"
                     url="https://calendly.com/nonsoikenwa/15min"
                   />

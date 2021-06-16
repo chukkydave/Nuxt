@@ -2,6 +2,9 @@ import React,{useState,useEffect} from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import { FaTwitter, FaFacebook, FaMedium, FaInstagram, FaLinkedin, FaLink } from 'react-icons/fa';
 import {getAbout} from './Calls'
+import axios from 'axios'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Spinner} from 'react-bootstrap'
 
 // Components
 import Icon from '../../components/common/Icon';
@@ -19,6 +22,29 @@ function Contact() {
     fetchData();
   }, []);
 
+  const [state, setstate] = useState({name:'', email:'', message:'', loading:false})
+  const handleChange=(event)=>{
+	  setstate({
+		  ...state,[event.target.name]:event.target.value
+	  })
+  }
+
+  const handleSubmit = (e) => {
+	e.preventDefault()
+	setstate({loading:true})
+	axios.post('https://justaportfolio.herokuapp.com/api/v1/feedback', state)
+	  .then(function (response) {
+		  console.log(response)
+		  alert('Message Sent Successfully')
+		  setstate({name:'',message:'', email:'',loading:false})
+	  })
+	  .catch(function (error) {
+		  console.log(error)
+		  alert('Error')
+		  setstate({loading:false})
+	  }) 
+
+	}
 	return (
 		<section className="section section-contact section-contact-1 display-fit-screen">
 			<div
@@ -69,30 +95,34 @@ function Contact() {
 							divider_2={true}
 							// subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua. Ut enim ad minim enim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 						/>
-						<form className="form form-1">
+						<form onSubmit={handleSubmit} className="form form-1">
 							<Row>
 								<Col xs={12} sm={12} md={6}>
 									<div className="form-item">
-										<input type="text" placeholder="Your Name" />
+										<input type="text" name="name" value={state.name} onChange={handleChange} placeholder="Your Name" />
 									</div>
 								</Col>
 								<Col xs={12} sm={12} md={6}>
 									<div className="form-item">
-										<input type="email" placeholder="Your Email" />
+										<input type="email" name="email" value={state.email} onChange={handleChange} placeholder="Your Email" />
 									</div>
 								</Col>
 								<Col xs={12} sm={12} md={12}>
 									<div className="form-item">
-										<textarea placeholder="Your Message" />
+										<textarea name="message" value={state.message} onChange={handleChange} placeholder="Your Message" />
 									</div>
 								</Col>
 								<Col xs={12} sm={12} md={12}>
-									<button
-										type="button"
+									{state.loading ? <Spinner animation="grow" role="status" variant="primary">
+										<span className="sr-only">Sending...</span>
+									</Spinner> : <button
+										type="submit"
 										className="button button-block button-primary"
 									>
 										Send Message
-									</button>
+									</button>}
+									
+									
 								</Col>
 							</Row>
 						</form>
