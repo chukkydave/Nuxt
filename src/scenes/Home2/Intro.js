@@ -41,8 +41,8 @@ function Intro() {
       									<span>Product Analyst</span>
                     </TextLoop>
                     
-                    <br />
-                    Based in {about.address}.
+                    {/* <br />
+                    Based in {about.address}. */}
                   </h1>
                 </header>
                 {/* <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1UQMcAgxOxRWxgb5ECSZa3oedqma58DL0/view?usp=sharing"> */}
